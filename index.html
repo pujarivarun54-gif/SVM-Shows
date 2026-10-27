@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVM Shows | Movie Ticket Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar"><div class="brand"><span class="logo">S</span><div><strong>SVM Shows</strong><small>Movie Ticket Booking System</small></div></div><button class="ghost" id="loginBtn">Login / Register</button></header>
+<main>
+<section class="hero"><div><p class="eyebrow">IT ALL STARTS HERE!</p><h1>Book your movie tickets easily.</h1><p>Choose a movie, theatre, show and seats — then confirm your booking.</p><div class="hero-actions"><button class="primary" onclick="scrollToMovies()">Browse Movies</button><button class="secondary" onclick="openBookings()">My Bookings</button></div></div><div class="hero-card"><div class="screen">SCREEN</div><div class="mini-seats">A1 A2 A3 A4 A5<br>B1 B2 B3 B4 B5<br>C1 C2 C3 C4 C5</div></div></section>
+<section class="section"><div class="section-head"><div><span class="eyebrow">NOW SHOWING</span><h2>Recommended Movies</h2></div><span id="movieCount" class="pill"></span></div><div id="movies" class="movie-grid"></div></section>
+<section class="section booking-panel" id="bookingPanel"><div class="section-head"><div><span class="eyebrow">BOOK A TICKET</span><h2>Choose your show</h2></div><span id="selectedMovieLabel" class="pill">Select a movie</span></div><div class="selectors"><label>Theatre<select id="theatre"><option>Ranga Cine Central: Dharmavaram</option><option>SVM Cinemas: Anantapur</option></select></label><label>Date<select id="date"><option>Today</option><option>Tomorrow</option></select></label><label>Show time<select id="time"><option>06:20 PM</option><option>09:20 PM</option></select></label></div><div class="seat-title"><h3>Select seats</h3><span>Green = available · Red = selected</span></div><div id="seats" class="seat-grid"></div><div class="checkout"><div><span>Tickets</span><strong id="ticketCount">0</strong></div><div><span>Total</span><strong id="total">₹0</strong></div><button class="primary" id="bookBtn">Book Ticket</button></div></section>
+<section class="section" id="bookingsSection"><div class="section-head"><div><span class="eyebrow">YOUR ORDERS</span><h2>Booking History</h2></div></div><div id="bookings" class="booking-list"><div class="empty">No bookings yet.</div></div></section>
+</main>
+<footer>© 2026 SVM Shows · College Java Project · Core Java source is included in the <code>java/</code> folder.</footer>
+<div class="modal hidden" id="modal"><div class="modal-card"><button class="close" onclick="closeModal()">×</button><h2>Login / Register</h2><p>Demo login for the deployed frontend. Your browser stores demo bookings locally.</p><label>Name<input id="userName" placeholder="Varun"></label><label>Email<input id="userEmail" type="email" placeholder="you@example.com"></label><button class="primary full" onclick="saveUser()">Continue</button></div></div>
+<script src="app.js"></script>
+</body>
+</html>
