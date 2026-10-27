@@ -7,6 +7,27 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="svm-splash" id="svmSplash" aria-label="SVM Shows intro">
+  <div class="splash-glow"></div>
+  <div class="splash-logo-wrap">
+    <svg class="splash-logo" viewBox="0 0 900 360" role="img" aria-label="SVM Shows">
+      <defs>
+        <linearGradient id="svmGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffb52e"/>
+          <stop offset="28%" stop-color="#ff3d4f"/>
+          <stop offset="55%" stop-color="#d7198c"/>
+          <stop offset="78%" stop-color="#7c36e8"/>
+          <stop offset="100%" stop-color="#ff5b35"/>
+        </linearGradient>
+        <filter id="logoGlow"><feGaussianBlur stdDeviation="10" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+      </defs>
+      <text x="450" y="185" text-anchor="middle" class="splash-svm-text" fill="url(#svmGradient)" filter="url(#logoGlow)">SVM</text>
+      <text x="450" y="305" text-anchor="middle" class="splash-shows-text">SHOWS</text>
+    </svg>
+    <div class="splash-tagline">YOUR MOVIE. YOUR SEAT. YOUR SHOW.</div>
+  </div>
+</div>
+
 <header class="topbar"><div class="brand"><span class="logo">S</span><div><strong>SVM Shows</strong><small>Movie Ticket Booking System</small></div></div><button class="ghost" id="loginBtn">Login / Register</button></header>
 <main>
 <section class="hero"><div><p class="eyebrow">IT ALL STARTS HERE!</p><h1>Book your movie tickets easily.</h1><p>Choose a movie, theatre, show and seats — then confirm your booking.</p><div class="hero-actions"><button class="primary" onclick="scrollToMovies()">Browse Movies</button><button class="secondary" onclick="openBookings()">My Bookings</button></div></div><div class="hero-card"><div class="screen">SCREEN</div><div class="mini-seats">A1 A2 A3 A4 A5<br>B1 B2 B3 B4 B5<br>C1 C2 C3 C4 C5</div></div></section>
